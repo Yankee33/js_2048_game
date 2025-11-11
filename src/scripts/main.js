@@ -10,7 +10,6 @@ const game = new Game();
 
 document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.querySelector('.start');
-  const restartButton = document.querySelector('.restart');
   const gameField = document.querySelector('.game-field');
   const scoreElement = document.querySelector('.game-score');
   const messageWin = document.querySelector('.message-win');
@@ -59,11 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
     startButton.classList.remove('start');
     startButton.classList.add('restart');
     startButton.textContent = 'Restart';
-  });
-
-  restartButton.addEventListener('click', () => {
-    game.restart();
-    render();
   });
 
   document.addEventListener('keydown', (e) => {
